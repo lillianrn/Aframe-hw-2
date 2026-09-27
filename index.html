@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html>
-    <head>
-         <title>A-Frame HW2
-         </title> 
-         <script src= "https://aframe.io/releases/1.7.0/aframe.min.js">
-          </script>
-          </head>
-          <body> 
-            <a-scene> 
-                <a-plane 
-                color="forestgreen" 
-                position="0 0 0" 
-                rotation="-90 0 0" 
-                width="500" 
-                height="500"> 
-            </a-plane> 
-            <a-sky 
-            color="lightskyblue">
-            </a-sky>
-            <a-cone 
+  <head>
+    <title>A-Frame HW2</title> 
+    <script src= "https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  </head>
+  <body> 
+    <a-scene>
+      <a-assets>
+        <img id="sand-base" src="assets\Stylized_Sand_002_basecolor.png">
+        <img id="sand-ambient-occlusion" src="assets\Stylized_Sand_002_ambientOcclusion.png">  
+        <img id="sand-normal" src="assets\Stylized_Sand_002_normal.png">   
+      </a-assets>
+      
+      <a-plane 
+        material="src: #sand-base;
+                  repeat: 500 500;
+                  ambientOcclusionMap: #sand-ambient-occlusion;
+                  ambinetOcclusionTextureRepeat: 500 500;
+                  normalMap: #sand-normal;
+                  normalTextureRepeat: 500 500"
+        position="0 0 0" 
+        rotation="-90 0 0" 
+        width="500" 
+        height="500"> 
+      </a-plane> 
+
+      <a-sky color="lightskyblue"></a-sky>
+      
+      <!-- Cone 1-->
+      <a-cone 
         position="0 1.5 -4" 
         radius-bottom="7" 
         height="9" 
@@ -26,14 +36,18 @@
         color="yellow"
         roughness="0.4">
       </a-cone>
+
+      <!-- Cone 2-->
       <a-cone 
         position="15 1.5 -4" 
-        radius-bottom="7" 
-        height="9" 
+        radius-bottom="10" 
+        height="15" 
         segments-radial="4" 
         color="yellow"
         roughness="0.4">
       </a-cone>
+
+      <!-- Cone 3-->
       <a-cone 
         position="-15 1.5 -4" 
         radius-bottom="7" 
@@ -42,6 +56,6 @@
         color="yellow"
         roughness="0.4">
       </a-cone>
-            </a-scene>
-        </body>
-        </html>
+    </a-scene>
+  </body>
+</html>

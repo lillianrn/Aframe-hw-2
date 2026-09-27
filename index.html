@@ -10,6 +10,10 @@
         <img id="sand-base" src="assets\Stylized_Sand_002_basecolor.png">
         <img id="sand-ambient-occlusion" src="assets\Stylized_Sand_002_ambientOcclusion.png">  
         <img id="sand-normal" src="assets\Stylized_Sand_002_normal.png">   
+
+        <img id="stone-base" src="assets\Stone_Floor_005_basecolor.jpg">
+        <img id="stone-ambient-occlusion" src="assets\Stone_Floor_005_ambientOcclusion.jpg">  
+        <img id="stone-normal" src="assets\Stone_Floor_005_normal.jpg"> 
       </a-assets>
       
       <a-plane 
@@ -29,31 +33,46 @@
       
       <!-- Cone 1-->
       <a-cone 
+        material="src: #stone-base;
+                  repeat: 500 500;
+                  ambientOcclusionMap: #stone-ambient-occlusion;
+                  ambinetOcclusionTextureRepeat: 500 500;
+                  normalMap: #stone-normal;
+                  normalTextureRepeat: 500 500"
         position="0 1.5 -4" 
         radius-bottom="7" 
         height="9" 
         segments-radial="4" 
-        color="yellow"
         roughness="0.4">
       </a-cone>
 
       <!-- Cone 2-->
-      <a-cone 
+      <a-cone
+        material="src: #stone-base;
+                  repeat: 500 500;
+                  ambientOcclusionMap: #stone-ambient-occlusion;
+                  ambinetOcclusionTextureRepeat: 500 500;
+                  normalMap: #stone-normal;
+                  normalTextureRepeat: 500 500"      
         position="15 1.5 -4" 
         radius-bottom="10" 
         height="15" 
         segments-radial="4" 
-        color="yellow"
         roughness="0.4">
       </a-cone>
 
       <!-- Cone 3-->
       <a-cone 
+        material="src: #stone-base;
+            repeat: 500 500;
+            ambientOcclusionMap: #stone-ambient-occlusion;
+            ambinetOcclusionTextureRepeat: 500 500;
+            normalMap: #stone-normal;
+            normalTextureRepeat: 500 500"
         position="-15 1.5 -4" 
         radius-bottom="7" 
         height="9" 
         segments-radial="4" 
-        color="yellow"
         roughness="0.4">
       </a-cone>
     </a-scene>

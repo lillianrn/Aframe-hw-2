@@ -34,7 +34,92 @@
         <img id="stone-base" src="assets\Stone_Floor_005_basecolor.jpg">
         <img id="stone-ambient-occlusion" src="assets\Stone_Floor_005_ambientOcclusion.jpg">  
         <img id="stone-normal" src="assets\Stone_Floor_005_normal.jpg"> 
-      </a-assets>
+
+        <img id="sky" src="assets/dramatic-panorama-sky-with-cloud-on-sunrise-and-sunset-time-free-photo.jpg"
+      </a-assets> </a-assets>
+      <a-asset-item
+      id="rangeRover"
+      src="assets\rr.glb">
+    </a-asset-item>
+
+    <a-asset-item
+      id="Camel 1"
+      src="assets\Camel1.glb">
+    </a-asset-item>
+
+    <a-asset-item
+      id="Camel 2"
+      src="assets\Camel2.glb">
+    </a-asset-item>
+
+    <a-asset-item
+      id="Camel 3"
+      src="assets\Camel3.glb">
+    </a-asset-item>
+
+    <a-asset-item
+      id="Palm"
+      src="assets\Palm.glb">
+    </a-asset-item>
+
+    <a-asset-item
+      id="Palm"
+      src="assets\Palm.glb">
+    </a-asset-item>
+
+    <a-asset-item
+      id="Palm"
+      src="assets\Palm.glb">
+    </a-asset-item>
+
+    <a-entity
+    gltf-model="#rangeRover"
+    position="80 1.5 20"
+    rotation="0 95 0"
+    scale="1 1 1">
+  </a-entity>
+
+  <a-entity
+    gltf-model="#Camel 1"
+    position="60 1 21"
+    rotation="0 95 0"
+    scale="0.01 0.01 0.01">
+  </a-entity>
+
+  <a-entity
+    gltf-model="#Camel 2"
+    position="57 0 20"
+    rotation="0 95 0"
+    scale=".3 .3 .3">
+  </a-entity>
+
+  <a-entity
+    gltf-model="#Camel 3"
+    position="53 0 23"
+    rotation="0 95 0"
+    scale=".3 .3 .3">
+  </a-entity>
+
+  <a-entity
+    gltf-model="#Palm"
+    position="20 0 30"
+    rotation="0 95 0"
+    scale=".3 .3 .3">
+  </a-entity>
+
+  <a-entity
+    gltf-model="#Palm"
+    position="70 0 30"
+    rotation="0 95 0"
+    scale=".3 .3 .3">
+  </a-entity>
+
+  <a-entity
+    gltf-model="#Palm"
+    position="50 0 20"
+    rotation="0 95 0"
+    scale=".3 .3 .3">
+  </a-entity>
       
       <a-plane 
         material="src: #sand-base;
@@ -49,7 +134,9 @@
         height="500"> 
       </a-plane> 
 
-      <a-sky color="lightskyblue"></a-sky>
+      <a-sky src="#sky" <a-sky></a-sky>
+
+      </a-sky>
       
       <!-- Cone 1-->
       <a-cone 

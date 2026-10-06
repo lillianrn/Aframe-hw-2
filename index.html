@@ -3,6 +3,7 @@
   <head>
     <title>A-Frame HW2</title> 
     <script src= "https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="Navigation.js"></script>
   </head>
   <body> 
     <a-scene>
@@ -76,7 +77,8 @@
     gltf-model="#rangeRover"
     position="80 1.5 20"
     rotation="0 95 0"
-    scale="1 1 1">
+    scale="1 1 1"
+    class="collidable">
   </a-entity>
 
   <a-entity
@@ -182,6 +184,100 @@
         segments-radial="4" 
         roughness="0.4">
       </a-cone>
+      <a-entity 
+  id="rig"
+  navigation
+>
+  <a-camera 
+    id="camera"
+    wasd-controls="enabled: false"
+    look-controls="enabled: false"
+    cursor="rayOrigin: mouse"
+    raycaster="objects: .clickable"
+  >          
+  </a-camera>
+  <a-entity 
+    id="right-hand" 
+    laser-controls="hand: right"
+    raycaster="objects: .clickable"
+  >
+  </a-entity>
+  <a-entity 
+    id="left-hand" 
+    laser-controls="hand: left"
+    raycaster="objects: .clickable"
+  >
+  </a-entity>
+  <a-entity 
+    id="feet-raycaster"
+    raycaster=
+      "objects: .collidable; 
+       showLine:false; 
+       far:5; 
+       direction:0 -1 0" 
+    position="0 0.5 0"
+  >
+  </a-entity>
+</a-entity>
+<a-entity id="raycasters">
+  <a-entity 
+    id="waist-raycaster-front"
+    raycaster=
+      "objects: .collidable; 
+       showLine:false; 
+       far:0.5" 
+    position="0 1 0"
+  >
+  </a-entity>
+  <a-entity 
+    id="head-raycaster-front"
+    raycaster=
+      "objects: .collidable; 
+       showLine:false; 
+       far:0.5" 
+    position="0 1.6 0"
+  >
+  </a-entity>
+  <a-entity 
+    id="knees-raycaster-front"
+    raycaster=
+      "objects: .collidable; 
+       showLine:false;
+       far:0.5" 
+    position="0 0.5 0"
+  >
+  </a-entity>
+  <a-entity 
+    id="waist-raycaster-back"
+    raycaster=
+      "objects: .collidable; 
+       showLine:false; 
+       far:0.1; 
+       direction:0 0 1" 
+    position="0 1 0"
+  >
+  </a-entity>
+  <a-entity 
+    id="head-raycaster-back"
+    raycaster=
+      "objects: .collidable; 
+       showLine:false; 
+       far:0.1; 
+       direction:0 0 1" 
+    position="0 1.6 0"
+  >
+  </a-entity>
+  <a-entity 
+    id="knees-raycaster-back"
+    raycaster=
+      "objects: .collidable; 
+       showLine:false; 
+       far:0.1; 
+       direction:0 0 1" 
+    position="0 0.5 0"
+  >
+  </a-entity>
+</a-entity>
     </a-scene>
   </body>
 </html>
